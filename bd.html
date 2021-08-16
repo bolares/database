@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>bd-sgbd-sql</title>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <img id ="img1" src="bolar_logo.png" width = "230" heigth = "230">
+    <h1 class="w3-padding-64"><b>Bolares<br>Learning</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Accueil</a>
+    <a href="bd.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Base de données</a>
+    <a href="sgbd.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">SGBD</a>
+    <a href="sql.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">SQL</a>  
+
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">PRATIQUE</a>
+    
+    <ul>
+      <li><a href="cassandra.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cassandra</a></li>
+      <li><a href="mongodb.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">MongoDB</a></li>
+      <li><a href="oracledb.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Oracle Database</a></li>
+      <li><a href="postgre.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">PostgreSQL</a></li>
+      <li><a href="mariadb.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">MariaDB</a></li>
+      <li><a href="mysql.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">MySQL</a></li>
+      <li><a href="sqlite.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">SQLite</a></li>
+    </ul>
+    
+    <!-- <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a> -->
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Bolares Learning</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>------- Base de données -------</b></h1>
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <!-- <img src="bd.jfif" width="=300" height ="280" href="bd.html" alt="base de données"><br> -->
+      <img src="sgbd.jfif" width="=340" height ="310" href="sgbd.html" alt="sgbd">
+    </div>
+
+
+    <div class = "container">
+      <h1><b>Definition</b></h1>
+        <p>Ensemble de données(quantité, date, nom, mot de passe, email, ...)
+            structurés/organisé non redondantes (sans doublons). 
+            dont l'organisation est régie par un modèle de données.
+            concernant un domaine bien specifique interogeable par 
+            requette stocker sur un support informatique sous plusieurs format telsque: txt csv
+            doc image json... .
+        </p>
+
+      <h1><b>Modèle de données:</b></h1>
+        <p>La description de l'organisation des données.</p><br>
+
+      <h2><b>Les diferents types de models de données:</h2></h2><br>
+      <h3><b>Le model logique ou conceptuel</b></h3>
+        <p>les modèles logiques décrivent
+            des entités et des attributs et les relations qui les lient, 
+            offrant ainsi une représentation claire de la finalité des données
+            dans le métier.
+        </p><br>
+
+      <h3><b>Le model physique:</b></h3>
+        <p>Les modèles physiques mettent ensuite en œuvre le
+            modèle logique sous forme de tables, de colonnes, de types de données
+            et d’index, associés à de brèves règles d’intégrité des données.
+        </p><br>
+        <p>Le modèle physique définit également l’allocation de mémoire sur le disque 
+            sur la base des options de configuration fournies par la plupart des systèmes
+            hôtes (Oracle, MS SQL Server, MySQL, etc.).</p><br>
+ 
+    Entité-Association
+	<b>Une entité:</b> <p>c'est une notion  en rapport avec un domaine pour
+		lequel les données sont enregistré.</p>
+    <b>Une association:</b> <p> une relation entre differente entité</p>
+    <b>Un attribut:</b> <p> c'est une caracteristique de l'entité.</p>
+    <b>cardinalité:</b> <p>la maniére dont les entités sont liées entre elle représente par le couple d'entier (x,y).</p>
+	<b>exemple :</b>
+    <p><img src="s7.png"></p>
+
+    <h1><b>TERMINOLOGIES ESSENTIELLES</b></h1>
+
+    <h2>Les formes normales</h2>>
+Les formes normales ont pour objectif de définir la décomposition des schémas relationnels, tout en préservant les DF et sans perdre d'informations, afin de représenter les objets et associations canoniques du monde réel de façon non redondante. On peut recenser les 6 formes normales suivantes, de moins en moins redondantes :
+<ul>
+   <li> la première forme normale</li>
+    <li>la deuxième forme normale</li>
+    <li>la troisième forme normale</li>
+    <li>la forme normale de Boyce-Codd</li>
+    <li>la quatrième forme normale</li>
+    <li>la cinquième forme normale</li>
+</ul>
+<h3>1FN – Première forme normale</h3>
+Est en première forme normale, une relation (ayant par définition une clé) dont les attributs
+possèdent tous une valeur sémantiquement atomique
+<h3>2FN – Deuxième forme normale</h3>
+la relation respectant la première forme normale et respectant le principe suivant :
+Les attributs d’une relation sont divisés en deux groupes : le premier groupe est composé 
+de la clé (un ou plusieurs attributs). Le deuxième groupe est composé des autres attributs (éventuellement vide).
+La deuxième forme normale stipule que tout attribut du deuxième groupe ne peut pas dépendre d’un sous-ensemble
+(strict) d’attribut(s) du premier groupe. En d’autres termes : « Un attribut non clé ne dépend pas d’une partie 
+de la clé mais de toute la clé. »
+<h3>3FN – Troisième forme normale</h3>
+Les attributs d’une relation sont divisés en deux groupes : le premier groupe est composé de la clé (un ou plusieurs attributs). 
+Le deuxième groupe est composé des autres attributs (éventuellement vide). La troisième forme normale stipule que tout attribut 
+du deuxième groupe ne peut pas dépendre d’un sous-ensemble (strict et excluant l’attribut considéré) d’autres attribut(s) du second groupe. 
+En d’autres termes : « Un attribut non clé ne dépend pas d’un ou plusieurs attributs ne participant pas à la clé ».
+Dit encore autrement : « Tous les attributs non clé doivent dépendre directement de la clé, au sens où il n’y a aucun attribut non
+clé dépendant de la clé par dépendances transitives par l’intermédiaire d’autres attributs non clé ».
+<h3>FNBC – Forme normale de Boyce-Codd</h3>
+la relation respectant la troisième forme normale et dont tous les attributs non-clé (hormis les clés candidates qui sont
+neutres et ne doivent pas être considérées) ne sont pas source de dépendance fonctionnelle (DF) pour une partie de la clé.
+Le non-respect de la 2FN, 3FN et la FNBC entraîne de la redondance, une même donnée étant répétée un nombre considérable de fois.
+
+<h3>4FN - quatrième forme normale</h3>
+Pour être en 4FN, il faut respecter la 3FN (et non nécessairement la FNBC). Pour toute relation de dimension n (avec n supérieur à 1)
+ en forme normale de Boyce-Codd, les relations de dimension n − 1 construites sur sa collection doivent avoir un sens.
+ Il ne doit pas être possible de reconstituer les occurrences de la relation de dimension n par jointure de deux relations de dimension n − 1.
+  Cette normalisation conduit parfois à décomposer une relation complexe en deux relations plus simples.
+<h3>5FN - cinquième forme normale</h3>
+Pour toute relation de dimension n (avec n supérieur à 2) en quatrième forme normale, il ne doit pas être possible de retrouver l’ensemble
+ de ses occurrences par jointure sur les occurrences des relations partielles prises deux à deux. Cette normalisation conduit 
+ parfois à décomposer une relation complexe en plusieurs relations plus simples. Le non-respect de la 4FN et 5FN entraîne de la perte de 
+ données et les données manquent de précision.
+<h3>Niveau 2: Magasins de documents</h3>
+Exemples de systèmes: MongoDB Exemples d'utilisateurs: Scratchpad d'Expedia Aussi connus sous le nom de systèmes de base de données
+orientés document, les magasins de documents (comme les feuilles de calcul) n'ont pas de schéma. Cela signifie que les enregistrements
+peuvent être non uniformes et / ou avoir une structure imbriquée et que les valeurs peuvent être stockées sous forme de tableaux.
+Les magasins de documents sont un exemple majeur de base de données NoSQL. Ce type de DBMS gagne en popularité à mesure que des 
+solutions à des défis spécifiques de gestion des données se présentent.
+<h3>FNDC - forme normale domaine clé</h3>
+Une relation est en FNDC si et seulement si toutes les contraintes sont la conséquence logique des contraintes de domaines et des contraintes
+ de clés qui s’appliquent à la relation. Pour se souvenir de l’ordre et des caractéristiques des trois premières formes normales, 
+ il suffit de se rappeler le serment que tous les témoins doivent prêter devant la justice : Je jure de dire la vérité, toute la vérité, 
+ rien d’autre que la vérité. Ce qui donne : 1FN = La clé. 2FN = Toute la clé. 3FN = Rien que la clé.
+
+
+</div>  
+</body>
+
+
+
+<footer>
+    <div id ="txt1" class="w3-light-grey w3-container w3-padding-32 col-md-6" style="margin-top:10px;padding-right:15px"><p class="w3-right">Powered by Bolares  Learning /-||-\</a>
+        <h3>Contact:</h3>
+                  <p><i class="fas fa-map-marker-alt"></i> Bingerville, Téléphone: (00225) 074-725-47-39, Email: <a href="mailto:hello@domain.com">bolares09@gmail.com</a></p>
+    </div>
+</footer>
+</html>

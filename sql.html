@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>bd-sgbd-sql</title>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <img id ="img1" src="bolar_logo.png" width = "230" heigth = "230">
+    <h1 class="w3-padding-64"><b>Bolares<br>Learning</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Accueil</a>
+    <a href="bd.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Base de données</a>
+    <a href="sgbd.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">SGBD</a>
+    <a href="sql.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">SQL</a>  
+
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">PRATIQUE</a>
+    
+    <ul>
+      <li><a href="cassandra.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cassandra</a></li>
+      <li><a href="mongodb.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">MongoDB</a></li>
+      <li><a href="oracledb.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Oracle Database</a></li>
+      <li><a href="postgre.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">PostgreSQL</a></li>
+      <li><a href="mariadb.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">MariaDB</a></li>
+      <li><a href="mysql.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">MySQL</a></li>
+      <li><a href="sqlite.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">SQLite</a></li>
+    </ul>
+    
+    <!-- <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a> -->
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Bolares Learning</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>------------- SQL -------------</b></h1>
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <!-- <img src="bd.jfif" width="=300" height ="280" href="bd.html" alt="base de données"><br> -->
+      <img src="sql.jfif" width="=310" height ="310" href="sgbd.html" alt="sgbd">
+    </div>
+
+
+    <div class = "container">
+      
+      <h1>Définition</h1>
+      Le SQL (Structured Query Language) est un langage informatique permettant de communiquer avec une base de données. Il est notamment très utilisé par les développeurs web pour communiquer avec les données d’un site web.
+      
+    <h1>LES REQUETTES SQL</h1>
+    <ul>
+      Il existe plusieurs requêtes. Ce sont: 
+      <li>SELECT : Sélection de données,</li>
+      <li>JOIN : Jointure de plusieurs sources,</li>
+      <li>INSERT : Insertion de données,</li>
+      <li>DELETE : Suppression de données,</li>
+      <li>UPDATE : Mise à jour de données existantes.</li>
+    </ul>
+      <h2>SELECT</h2>
+      Select sert à sélectionner un ou plusieurs éléments
+      voilà l’exemple d’une table, pour sélectionner un ou plusieurs élémenst avec SELECT on fait:<br>
+      
+      SELECT nom_colonnes FROM nom_table ;<br>
+      
+        <p STYLE="padding:0 0 0 20px;">CREATE TABLE Animal (
+        <p STYLE="padding:0 0 0 20px;">id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+        <p STYLE="padding:0 0 0 20px;">espece VARCHAR(40) NOT NULL,
+        <p STYLE="padding:0 0 0 20px;">sexe CHAR(1),
+        <p STYLE="padding:0 0 0 20px;">date_naissance DATETIME NOT NULL,
+        <p STYLE="padding:0 0 0 20px;">nom VARCHAR(30),
+      
+        <p STYLE="padding:0 0 0 20px;">PRIMARY KEY (id)
+          )<br><br></p>
+      
+      Voici la requête SQL pour obtenir une table dans laquelle on ne récupérerait que les noms et les dates de naissance des animaux (sans doublons) :<br>
+      SELECT DISTINCT nom , date_naissance
+      FROM Animal
+      
+      Il existe plusieurs type de requête SELECT :<br>
+      SELECT colonne<br>
+      FROM table<br>
+      WHERE condition => permet d’extraire les lignes qui respectent une condition<br>
+      
+      ORDER BY attribut=> permet de trier les lignes dans un résultat d’une requête SQL par ordre ascendant ou descendant<br>
+      
+      GROUP BY attribut =>groupe plusieurs résultats et utilise une fonction de totaux sur un groupe de résultat<br>
+      
+      HAVING condition => La condition HAVING en SQL est presque similaire à WHERE à la seule différence que HAVING permet de filtrer en utilisant des fonctions telles que SUM(), COUNT(), AVG(), MIN() ou MAX().<br>
+      
+      LIMIT nombre_de_lignes ; => utilisé pour spécifier le nombre maximum de résultats que l’on souhaite obtenir.<br>
+      
+      <h2>INSERT</h2>
+      INSERT sert à ajouter des lignes dans une table . Sa syntaxe est la suivante :<br>
+      INSERT INTO nom_table VALUES ( liste des valeurs de chaque attribut, séparés par des virgules )<br>
+      <b>exemple:</b> 
+      INSERT INTO personne VALUES (50, "Dupont", "Pierre", 25, "Sans emploi", 0, 174)<br>
+      
+      <h2>DELETE</h2>
+      permet de supprimer des lignes dans une table. En associant à WHERE il est possible de sélectionner les lignes concernées qui seront supprimées.
+Exemple :
+DELETE FROM nom_table
+WHERE condition ;
+
+DELETE FROM Mineurs WHERE age >= 18 ;
+
+
+      <h2>UPDATE</h2>
+      La commande UPDATE permet d’effectuer des modifications ou des mise à jour sur des lignes existantes. Très souvent cette commande est utilisée avec WHERE pour spécifier sur quelles lignes doivent porter la ou les modifications.
+      UPDATE table
+      SET colonne_1 = 'valeur 1', colonne_2 = 'valeur 2', colonne_3 = 'valeur 3'
+      WHERE condition ;
+      
+      <h2>Jointute SQL</h2>
+      Les jointures en SQL permettent d’associer plusieurs tables dans une même requête. Cela permet d’exploiter la puissance des bases de données relationnelles pour obtenir des résultats qui combinent les données de plusieurs tables de manière efficace.
+      <h3>Types de jointures</h3>
+      Il y a plusieurs méthodes pour associer 2 tables ensemble. Voici la liste des différentes techniques qui sont utilisées :<br>
+      <ul>  
+        <li>INNER JOIN : jointure interne pour retourner les enregistrements quand la condition est vrai dans les 2 tables. C’est l’une des jointures les plus communes.</li>
+        <li>CROSS JOIN : jointure croisée permettant de faire le produit cartésien de 2 tables. En d’autres mots, permet de joindre chaque lignes d’une table avec chaque lignes d’une seconde table. Attention, le nombre de résultats est en général très élevé.</li>
+        <li>LEFT JOIN (ou LEFT OUTER JOIN) : jointure externe pour retourner tous les enregistrements de la table de gauche (LEFT = gauche) même si la condition n’est pas vérifié dans l’autre table.</li>
+        <li>RIGHT JOIN (ou RIGHT OUTER JOIN) : jointure externe pour retourner tous les enregistrements de la table de droite (RIGHT = droite) même si la condition n’est pas vérifié dans l’autre table.</li>
+        <li>FULL JOIN (ou FULL OUTER JOIN) : jointure externe pour retourner les résultats quand la condition est vrai dans au moins une des 2 tables.</li>
+        <li>SELF JOIN : permet d’effectuer une jointure d’une table avec elle-même comme si c’était une autre table.</li>
+        <li>NATURAL JOIN : jointure naturelle entre 2 tables s’il y a au moins une colonne qui porte le même nom entre les 2 tables SQL</li>
+        <li>UNION JOIN : jointure d’union
+      </ul>  
+
+      <h1>CARACTÉRISTIQUES DE SQL:</h1>
+      SQL définit à la fois 3 types de langages qui permettent la définition, la manipulation et le controle sur les données: 
+          <b>-	LDD (langage de définition de données)</b>
+          il permet la définition d’un schema de base de données et des contraintes associées à cette base de données.
+          <li>CREATE</li>
+          <li>ALTER</li>
+          <li>DROP</li>
+          <b>-	LMD (Langage de Manipulation des données)</b>
+          il permet la manipulation des données: 
+          <li>afficher  => SELECT</li>
+          <li>insérer +> INSERT INTO,</li>
+          <li>mise à jour )=> UPDATE</li>
+          <li>suppression => DELETE</li>
+
+          <b>-	LCD (Langage de Contrôle de Données)</b>
+          Il permet le contrôle et les droits d’accès sur les données.
+          <li>GRANT</li>
+          <li>REVOKE</li>
+          <li>COMMIT</li>
+          <li>ROLLBACK</li><br>
+          <a href="https://sql.sh/">Plus de syntaxes ici</a></li>
+      
+          <p><href =  ></href></p>
+
+</div>  
+</body>
+<footer>
+    <div id ="txt1" class="w3-light-grey w3-container w3-padding-32 col-md-6" style="margin-top:10px;padding-right:15px"><p class="w3-right">Powered by Bolares  Learning /-||-\</a>
+        <h3>Contact:</h3>
+                  <p><i class="fas fa-map-marker-alt"></i> Bingerville, Téléphone: (00225) 074-725-47-39, Email: <a href="mailto:hello@domain.com">bolares09@gmail.com</a></p>
+    </div>
+</footer>
+</html>

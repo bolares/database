@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>bd-sgbd-sql</title>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <img id ="img1" src="bolar_logo.png" width = "230" heigth = "230">
+    <h1 class="w3-padding-64"><b>Bolares<br>Learning</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Accueil</a>
+    <a href="bd.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Base de données</a>
+    <a href="sgbd.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">SGBD</a>
+    <a href="sql.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">SQL</a>  
+
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">PRATIQUE</a>
+    
+    <ul>
+      <li><a href="cassandra.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Cassandra</a></li>
+      <li><a href="mongodb.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">MongoDB</a></li>
+      <li><a href="oracledb.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Oracle Database</a></li>
+      <li><a href="postgre.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">PostgreSQL</a></li>
+      <li><a href="mariadb.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">MariaDB</a></li>
+      <li><a href="mysql.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">MySQL</a></li>
+      <li><a href="sqlite.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">SQLite</a></li>
+    </ul>
+    
+    <!-- <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a> -->
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Bolares Learning</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>------------ SGBD ------------</b></h1>
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <!-- <img src="bd.jfif" width="=300" height ="280" href="bd.html" alt="base de données"><br> -->
+      <img src="sgbd.jfif" width="=300" height ="280" href="sgbd.html" alt="sgbd">
+    </div>
+
+
+    <div class = "container">
+      <h1>SYSTEME DE GESTION DE BASE DONNEES</h1>
+    </div>
+      <P>Nous apprendrons en theorie et en pratique ce que c'est que les systeme de gestion de base de données.</P>
+      <h2>DEFINITION SGBD</h2>
+          <div class = "container">
+            <p>Un Système de Gestion de Base de Données (SGBD) est un logiciel qui permet de stocker des informations dans une base de données. Un tel système permet de lire, écrire, modifier, trier, transformer ou même imprimer les données qui sont contenus dans la base de données.
+            Parmi les logiciels les plus connus il est possible de citer : MySQL, PostgreSQL, SQLite, Oracle Database, Microsoft SQL Server, Firebird ou Ingres.</P>
+          </div>
+
+      <h2>Les quatre principaux types de système de gestion de base de données sont:</h2>
+      <div class = "container" style = "text-align: left">
+           <UL>
+            <LI>Base de données hiérarchique</LI>
+            <LI>"Base de données réseau"</LI>
+            <LI>Base de données relationnelle</LI>
+            <LI>Base de données orientée objet</LI>
+           </UL>
+      </div>
+
+    <h2>Base de données hiérarchique</h2>
+      <p>
+        SGBD hiérarchique
+        Dans une base de données hiérarchique, les données de modèle sont
+        organisées dans une structure arborescente. Les données sont stockées
+        au format hiérarchique (de haut en bas ou de bas en haut).
+        Les données sont représentées à l’aide d’une relation parent-enfant. 
+        Dans le SGBD hiérarchique, le parent peut avoir de nombreux enfants, 
+        mais les enfants n’ont qu’un seul parent.
+      </p>
+    
+    <h2>Base de données réseau</h2>
+      <p>
+        Le modèle de base de données réseau permet à chaque enfant d’avoir plusieurs parents.
+        Il vous aide à répondre au besoin de modéliser des relations plus complexes
+        comme la relation plusieurs-à-plusieurs ordres / parties. Dans ce modèle,
+        les entités sont organisées dans un graphique accessible via plusieurs chemins.
+      </p>
+    <h2>Base de données relationnelle</h2>
+      <p>
+        Le SGBD relationnel est le modèle de SGBD le plus largement utilisé
+        car il est l’un des plus faciles. Ce modèle est basé sur la normalisation 
+        des données dans les lignes et les colonnes des tables. Modèle relationnel
+        stocké dans des structures fixes et manipulé à l’aide de SQL.
+      </p>
+      <h2>Base de données orientée objet</h2>
+      <p>
+        Dans Modèle orienté objet, données stockées sous forme d’objets.
+        La structure qui est appelée classes qui affichent des données en son sein.
+        C’est l’un des composants du SGBD qui définit une base de données comme
+        une collection d’objets qui stocke à la fois les valeurs et les opérations des membres de données.
+      </p>
+      <h2>Avantages du SGBD</h2>
+        <ul>    
+            <li>Sgbd offre une variété de techniques pour stocker et récupérer des données</li>
+            <li>SGBD sert de gestionnaire efficace pour équilibrer les besoins de plusieurs applications utilisant les mêmes données</li>
+            <li>Procédures uniformes d’administration des données</li>
+            <li>Les programmeurs d’applications ne sont jamais exposés aux détails de la représentation et du stockage des données.</li>
+            <li>Un SGBD utilise diverses fonctions puissantes pour stocker et récupérer efficacement les données.</li>
+            <li>Offre l’intégrité et la sécurité des données</li>
+            <li>Le SGBD implique des contraintes d’intégrité pour obtenir un niveau élevé de protection contre l’accès interdit aux données.</li>
+            <li>Un SGBD planifie l’accès simultané aux données de manière à ce qu’un seul utilisateur puisse accéder aux mêmes données à la fois</li>
+            <li>Réduction du temps de développement d’applications</li>
+          
+        </ul>
+      <h2>Inconvénient du SGBD</h2>
+SGBD peut offrir beaucoup d’avantages, mais, il a certains défauts-
+        <p>
+          <li>Le coût du matériel et des logiciels d’un SGBD est assez élevé, ce qui augmente le budget de votre organisation.</li>
+          <li>La plupart des systèmes de gestion de base de données sont souvent des systèmes complexes, de sorte que la formation des utilisateurs à l’utilisation du SGBD est nécessaire.</li>
+          <li>Dans certaines organisations, toutes les données sont intégrées dans une base de données unique qui peut être endommagée en raison d’une panne électrique ou la base de données est corrompue sur le support de stockage</li>
+          <li>L’utilisation du même programme à la fois par de nombreux utilisateurs entraîne parfois la perte de certaines données.</li>
+          <li>SGBD ne peut pas effectuer de calculs sophistiqués</li>
+        </p>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+ 
+
+<footer>
+<div id ="txt1" class="w3-light-grey w3-container w3-padding-32 col-md-6" style="margin-top:10px;padding-right:15px"><p class="w3-right">Powered by Bolares  Learning /-||-\</a>
+    <h3>Contact:</h3>
+              <p><i class="fas fa-map-marker-alt"></i> Bingerville, Téléphone: (00225) 074-725-47-39, Email: <a href="mailto:hello@domain.com">bolares09@gmail.com</a></p>
+</div>
+</footer>
+
+
+</body>
+</html>
